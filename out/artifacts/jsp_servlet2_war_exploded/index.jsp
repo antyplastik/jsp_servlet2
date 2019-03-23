@@ -19,6 +19,5 @@
 
 <body style="background: #<%=R+G+B%>">
 
-
 </body>
 </html>
