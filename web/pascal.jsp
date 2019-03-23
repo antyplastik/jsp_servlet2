@@ -6,40 +6,45 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="PascalTriangle" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Pascal Triangle</title>
 </head>
 <body>
 
 
-<% int n = Integer.parseInt(request.getParameter("n"));%>
-<% int m = Integer.parseInt(request.getParameter("m"));%>
+<% int row = Integer.parseInt(request.getParameter("level"));%>
+<%--<% int m = Integer.parseInt(request.getParameter("m"));%>--%>
 
-<table>
+<%--<table>--%>
 
-    <%
-        for (int i = 1; i <= n; i++) {
-    %>
-    <tr style="height: 10px">
-        <%
-            for (int j = 1; j <= m; j++) {
-        %>
-        <td style="width: 20px">
-            <%
+    <%--<%!--%>
+        <%--public String pascal(int rows) {--%>
+            <%--String result = "";--%>
+            <%--int cols = rows;--%>
+            <%--for (int i = 0; i < rows; i++) {--%>
+                <%--int number = 1;--%>
+                <%--for (int j = 1; j < cols; j++) {--%>
+                    <%--result += number + " ";--%>
+                    <%--number = (number * (i -j +1))/j;--%>
+                <%--}--%>
+                <%--result += "<br>";--%>
+            <%--}--%>
 
-                out.print(i * j);
-            %>
-        </td>
-        <%
-            }
-        %>
-    </tr>
-    <%
-        }
-    %>
+            <%--return result;--%>
+        <%--}--%>
 
-</table>
+    <%--%>--%>
+
+    <%--&lt;%&ndash;<p style="text-align: center"><%=pascal(row)%>&ndash;%&gt;--%>
+  <%----%>
+    <%--</p>--%>
+
+<%--</table>--%>
+<%--<p style="text-align: center"><%=PascalTriangle.generateTriangle(row,1,"<br>")%>--%>
+
+${PascalTriangle.generateTriangle(row,1,"<br>")}
 
 </body>
 </html>

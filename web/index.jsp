@@ -19,6 +19,7 @@
 
 <body style="background: #<%=R+G+B%>">
 
-
+<%@include file="pascal.jsp"%>
+<%@include file="jstl.jsp"%>
 </body>
 </html>
