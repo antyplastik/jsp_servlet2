@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="PascalTriangle" %>
 <html>
 <head>
@@ -14,7 +15,7 @@
 <body>
 
 
-<% int row = Integer.parseInt(request.getParameter("level"));%>
+<%--<% int row = Integer.parseInt(request.getParameter("level"));%>--%>
 <%--<% int m = Integer.parseInt(request.getParameter("m"));%>--%>
 
 <%--<table>--%>
@@ -37,14 +38,13 @@
 
     <%--%>--%>
 
-    <%--&lt;%&ndash;<p style="text-align: center"><%=pascal(row)%>&ndash;%&gt;--%>
+    <%--<p style="text-align: center"><%=pascal(row)%>--%>
   <%----%>
     <%--</p>--%>
 
 <%--</table>--%>
 <%--<p style="text-align: center"><%=PascalTriangle.generateTriangle(row,1,"<br>")%>--%>
-
-${PascalTriangle.generateTriangle(row,1,"<br>")}
+<p style="text-align: center">${PascalTriangle.generateTriangle(row,1,"<br>")}</p>
 
 </body>
 </html>
